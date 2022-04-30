@@ -20,7 +20,7 @@ const createImageNode = () => {
     const img = document.createElement('img');
     img.dataset.src = `https://randomfox.ca/images/${addFox()}.jpg`;
     img.width = '320';
-    img.className = 'mx-auto'
+    img.className = 'mx-auto rounded-md bg-gray-300'
     img.alt = "";
     container.appendChild(img);
     container.className = "p-4";
@@ -35,6 +35,12 @@ const addImage = () => {
 const addButton = document.querySelector('button')
 addButton.addEventListener('click', addImage)
 
+const removeImage = () => {
+    return images.innerHTML = ""
+}
+
+const deleteButton = document.querySelector('#clear')
+deleteButton.addEventListener('click', removeImage)
 
 
 
